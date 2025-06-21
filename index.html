@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Player - Sneha Kumari</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="player">
+    <div class="title" id="title">Loading...</div>
+    <div class="artist" id="artist">Sneha Kumari</div>
+    <audio id="audio"></audio>
+    <div class="controls">
+      <button onclick="prevSong()">⏮</button>
+      <button onclick="togglePlay()" id="playBtn">▶️</button>
+      <button onclick="nextSong()">⏭</button>
+    </div>
+    <div class="progress-container" onclick="setProgress(event)">
+      <div class="progress" id="progress"></div>
+    </div>
+    <div class="time">
+      <span id="current">0:00</span>
+      <span id="duration">0:00</span>
+    </div>
+    <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1" />
+    <div class="playlist" id="playlist"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
